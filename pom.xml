@@ -6,7 +6,7 @@
     <groupId>com.jingxuan.is.yao</groupId>
     <artifactId>chiyao</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>scheduleForYao</name>
     <description>ChiYao For Life</description>
@@ -33,6 +33,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -71,20 +77,17 @@
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-java-sdk-core</artifactId>
             <version>3.2.3</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/aliyun-java-sdk-core-3.2.3.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
             <version>1.0.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/aliyun-java-sdk-dysmsapi-1.0.0.jar</systemPath>
         </dependency>
 
     </dependencies>
 
     <build>
+        <finalName>chiyao</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

@@ -22,7 +22,7 @@ public class RemindTask {
     @Autowired
     private ReminderConfig reminderConfig;
 
-    @Scheduled(cron = "0 0/30 9,21 * * *")
+    @Scheduled(cron = "0 30 9,21 * * *")
     public void doIt() {
         int count = 0;
         boolean sendBool = smsUtil.sendSms(reminderConfig.getTelPhone());
